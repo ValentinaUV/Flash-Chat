@@ -21,18 +21,37 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IRc-qh-7t8">
                         <rect key="frame" x="10" y="10" width="300" height="50"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="qvk-tJ-FfS">
-                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="qvk-tJ-FfS">
+                                <rect key="frame" x="-40" y="0.0" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Bn6-hh-ZZY"/>
                                     <constraint firstAttribute="height" constant="40" id="IEr-nX-iyj"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-0B-vYp" userLabel="User Bubble">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4U-JX-Rsn">
+                                        <rect key="frame" x="8" y="9" width="64" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="BrandLightBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c4U-JX-Rsn" secondAttribute="trailing" constant="10" id="2kH-Tu-noI"/>
+                                    <constraint firstItem="c4U-JX-Rsn" firstAttribute="leading" secondItem="dOj-0B-vYp" secondAttribute="leading" constant="10" id="5hQ-Xr-2MJ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="MHo-qe-8OR"/>
+                                    <constraint firstItem="c4U-JX-Rsn" firstAttribute="top" secondItem="dOj-0B-vYp" secondAttribute="top" constant="10" id="Y7q-GE-Ast"/>
+                                    <constraint firstAttribute="bottom" secondItem="c4U-JX-Rsn" secondAttribute="bottom" constant="10" id="dv0-dC-EUl"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7h-YP-ssw">
-                                <rect key="frame" x="60" y="0.0" width="180" height="50"/>
+                                <rect key="frame" x="80" y="0.0" width="160" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eB-eq-EH9">
-                                        <rect key="frame" x="10" y="10" width="160" height="30"/>
+                                        <rect key="frame" x="10" y="10" width="140" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="BrandLightPurple"/>
                                         <nil key="highlightedColor"/>
@@ -67,8 +86,10 @@
             <connections>
                 <outlet property="label" destination="5eB-eq-EH9" id="mq7-LM-eNZ"/>
                 <outlet property="leftImageView" destination="qvk-tJ-FfS" id="aon-Mb-98p"/>
+                <outlet property="leftLabel" destination="c4U-JX-Rsn" id="CX2-n5-kFW"/>
                 <outlet property="messageBubble" destination="j7h-YP-ssw" id="hej-Jy-3Tq"/>
                 <outlet property="rightImageView" destination="uDx-ZJ-eUJ" id="U8m-1q-hpg"/>
+                <outlet property="userBubble" destination="dOj-0B-vYp" id="jih-PY-nTm"/>
             </connections>
             <point key="canvasLocation" x="160.86956521739131" y="94.419642857142847"/>
         </tableViewCell>
@@ -76,6 +97,12 @@
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
         <image name="YouAvatar" width="36" height="36"/>
+        <namedColor name="BrandBlue">
+            <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLightBlue">
+            <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BrandLightPurple">
             <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
