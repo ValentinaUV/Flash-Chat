@@ -5,7 +5,7 @@
 //  Created by Ungurean Valentina on 18.11.2021.
 //
 
-struct K {
+struct Constants {
     static let appName = "⚡️FlashChat"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"

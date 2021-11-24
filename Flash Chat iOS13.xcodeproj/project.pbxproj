@@ -24,6 +24,10 @@
 		A76FB5542746C8AA008A3011 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FB5522746C8AA008A3011 /* MessageCell.swift */; };
 		A76FB5552746C8AA008A3011 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76FB5532746C8AA008A3011 /* MessageCell.xib */; };
 		A76FB559274860D1008A3011 /* Documentation in Resources */ = {isa = PBXBuildFile; fileRef = A76FB558274860D1008A3011 /* Documentation */; };
+		A76FB55F274EEEF1008A3011 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FB55D274EEEF1008A3011 /* LoginViewController.storyboard */; };
+		A76FB571274EF184008A3011 /* ChatViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FB564274EF183008A3011 /* ChatViewController.storyboard */; };
+		A76FB573274EF184008A3011 /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FB568274EF183008A3011 /* WelcomeViewController.storyboard */; };
+		A76FB574274EF184008A3011 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FB56A274EF183008A3011 /* RegisterViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		A76FB5522746C8AA008A3011 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A76FB5532746C8AA008A3011 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		A76FB558274860D1008A3011 /* Documentation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Documentation; sourceTree = "<group>"; };
+		A76FB55E274EEEF1008A3011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginViewController.storyboard; sourceTree = "<group>"; };
+		A76FB565274EF183008A3011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ChatViewController.storyboard; sourceTree = "<group>"; };
+		A76FB569274EF183008A3011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WelcomeViewController.storyboard; sourceTree = "<group>"; };
+		A76FB56B274EF183008A3011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterViewController.storyboard; sourceTree = "<group>"; };
 		B014C7D5E33DDCCF6E16A676 /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
 		D4A1BF75A2897245094D4779 /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 		F76A34CB6C0960893DC616BA /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +121,10 @@
 		0B628193235DF03400E35CAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A76FB564274EF183008A3011 /* ChatViewController.storyboard */,
+				A76FB56A274EF183008A3011 /* RegisterViewController.storyboard */,
+				A76FB568274EF183008A3011 /* WelcomeViewController.storyboard */,
+				A76FB55D274EEEF1008A3011 /* LoginViewController.storyboard */,
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
 				A76FB5522746C8AA008A3011 /* MessageCell.swift */,
 				A76FB5532746C8AA008A3011 /* MessageCell.xib */,
@@ -205,12 +217,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A76FB55F274EEEF1008A3011 /* LoginViewController.storyboard in Resources */,
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
 				A76FB5552746C8AA008A3011 /* MessageCell.xib in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				A76FB559274860D1008A3011 /* Documentation in Resources */,
+				A76FB571274EF184008A3011 /* ChatViewController.storyboard in Resources */,
 				A76FB54A27454100008A3011 /* GoogleService-Info.plist in Resources */,
+				A76FB573274EF184008A3011 /* WelcomeViewController.storyboard in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
+				A76FB574274EF184008A3011 /* RegisterViewController.storyboard in Resources */,
 				0B62817E235DEE8100E35CAF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +309,38 @@
 				0B628182235DEE8400E35CAF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A76FB55D274EEEF1008A3011 /* LoginViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FB55E274EEEF1008A3011 /* Base */,
+			);
+			name = LoginViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		A76FB564274EF183008A3011 /* ChatViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FB565274EF183008A3011 /* Base */,
+			);
+			name = ChatViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		A76FB568274EF183008A3011 /* WelcomeViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FB569274EF183008A3011 /* Base */,
+			);
+			name = WelcomeViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		A76FB56A274EF183008A3011 /* RegisterViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FB56B274EF183008A3011 /* Base */,
+			);
+			name = RegisterViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
