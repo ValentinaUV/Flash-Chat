@@ -14,17 +14,31 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    var firebaseManager = FirebaseManager()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        firebaseManager.delegate = self
+    }
 
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let passwd = passwordTextfield.text {
-            Auth.auth().signIn(withEmail: email, password: passwd) { authResult, error in
-                if let e = error {
-                    print(e)
-                } else {
-                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
-                }
-            }
+            firebaseManager.login(withEmail: email, password: passwd)
+        }
+    }
+}
+
+extension LoginViewController: FirebaseLoginDelegate {
+    
+    func didLoginUser() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: Segues.loginSegue, sender: self)
         }
     }
     
+    func didFailWithError(error: Error) {
+        print("Login error")
+        print(error.localizedDescription)
+    }
 }

@@ -14,18 +14,32 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
+    var firebaseManager = FirebaseManager()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        firebaseManager.delegate = self
+    }
+    
     @IBAction func registerPressed(_ sender: UIButton) {
         
         if let email = emailTextfield.text, let password = passwordTextfield.text {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e.localizedDescription)
-                } else {
-                    //Navigate to ChatViewController
-                    self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
-                }
-            }
+            firebaseManager.createUser(withEmail: email, password: password)
+        }
+    }
+}
+
+extension RegisterViewController: FirebaseRegisterDelegate {
+    
+    func didRegisterUser() {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: Segues.registerSegue, sender: self)
         }
     }
     
+    func didFailWithError(error: Error) {
+        print("Register error")
+        print(error.localizedDescription)
+    }
 }

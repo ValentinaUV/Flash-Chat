@@ -7,10 +7,10 @@
 
 struct Constants {
     static let appName = "⚡️FlashChat"
-    static let cellIdentifier = "ReusableCell"
-    static let cellNibName = "MessageCell"
-    static let registerSegue = "RegisterToChat"
-    static let loginSegue = "LoginToChat"
+    static let receivedCellIdentifier = "ReceivedMessageCell"
+    static let receivedCellNibName = "MessageCellReceived"
+    static let sentCellIdentifier = "SentMessageCell"
+    static let sentCellNibName = "MessageCellSent"
     
     struct BrandColors {
         static let purple = "BrandPurple"
@@ -25,4 +25,9 @@ struct Constants {
         static let bodyField = "body"
         static let dateField = "date"
     }
+}
+
+struct Segues {
+    static let registerSegue = "RegisterToChat"
+    static let loginSegue = "LoginToChat"
 }
