@@ -127,11 +127,11 @@
 		0B628193235DF03400E35CAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A76FB564274EF183008A3011 /* ChatViewController.storyboard */,
-				A76FB56A274EF183008A3011 /* RegisterViewController.storyboard */,
-				A76FB568274EF183008A3011 /* WelcomeViewController.storyboard */,
-				A76FB55D274EEEF1008A3011 /* LoginViewController.storyboard */,
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
+				A76FB568274EF183008A3011 /* WelcomeViewController.storyboard */,
+				A76FB56A274EF183008A3011 /* RegisterViewController.storyboard */,
+				A76FB55D274EEEF1008A3011 /* LoginViewController.storyboard */,
+				A76FB564274EF183008A3011 /* ChatViewController.storyboard */,
 				A76FB5522746C8AA008A3011 /* MessageCellReceived.swift */,
 				A76FB5532746C8AA008A3011 /* MessageCellReceived.xib */,
 				A76FB579274F6F34008A3011 /* MessageCellSent.swift */,
