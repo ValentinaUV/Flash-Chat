@@ -96,7 +96,7 @@ extension ChatViewController: UITableViewDataSource {
     func getSentMessageCell(_ tableView: UITableView, _ indexPath: IndexPath, message: Message) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.sentCellIdentifier, for: indexPath) as? MessageCellSent else {
-            return tableView.dequeueReusableCell(withIdentifier: Constants.sentCellIdentifier, for: indexPath)
+            return UITableViewCell()
         }
         
         cell.label.text = message.body
@@ -106,7 +106,7 @@ extension ChatViewController: UITableViewDataSource {
     
     func getReceivedMessageCell(_ tableView: UITableView, _ indexPath: IndexPath, message: Message) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.receivedCellIdentifier, for: indexPath) as? MessageCellReceived else {
-            return tableView.dequeueReusableCell(withIdentifier: Constants.receivedCellIdentifier, for: indexPath)
+            return UITableViewCell()
         }
 
         let separated = message.sender.split(separator: "@")
