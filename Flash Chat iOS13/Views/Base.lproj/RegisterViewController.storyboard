@@ -12,7 +12,7 @@
         <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-BYZ-38-t0r" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewControllerID" id="BYZ-38-t0r" customClass="RegisterViewController" customModule="Flash_Chat_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h2S-Ae-zdW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="1857.9710144927537" y="-295.3125"/>
         </scene>
-        <!--UIViewController-lwd-AH-u8E-->
+        <!--ChatViewControllerID-->
         <scene sceneID="VEd-06-XVs">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-lwd-AH-u8E" id="dSd-8X-mzs" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ChatViewControllerID" id="dSd-8X-mzs" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVD-ei-lgQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2942.0289855072465" y="134.59821428571428"/>
