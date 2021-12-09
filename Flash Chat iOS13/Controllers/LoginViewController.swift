@@ -14,17 +14,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
-    var firebaseManager = FirebaseManager()
+    var authManager = AuthManager(cloudAuth: FirebaseAuth())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firebaseManager.delegate = self
+        authManager.cloudAuth.delegate = self
     }
 
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let passwd = passwordTextfield.text {
-            firebaseManager.login(withEmail: email, password: passwd)
+            authManager.login(withEmail: email, password: passwd)
         }
     }
 }

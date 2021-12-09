@@ -14,18 +14,18 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
-    var firebaseManager = FirebaseManager()
+    var authManager = AuthManager(cloudAuth: FirebaseAuth())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firebaseManager.delegate = self
+        authManager.cloudAuth.delegate = self
     }
     
     @IBAction func registerPressed(_ sender: UIButton) {
         
         if let email = emailTextfield.text, let password = passwordTextfield.text {
-            firebaseManager.createUser(withEmail: email, password: password)
+            authManager.createUser(withEmail: email, password: password)
         }
     }
 }

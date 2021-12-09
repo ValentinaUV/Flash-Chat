@@ -30,7 +30,9 @@
 		A76FB574274EF184008A3011 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FB56A274EF183008A3011 /* RegisterViewController.storyboard */; };
 		A76FB57B274F6F34008A3011 /* MessageCellSent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FB579274F6F34008A3011 /* MessageCellSent.swift */; };
 		A76FB57C274F6F34008A3011 /* MessageCellSent.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76FB57A274F6F34008A3011 /* MessageCellSent.xib */; };
-		A76FB57E275006A9008A3011 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FB57D275006A9008A3011 /* FirebaseManager.swift */; };
+		A76FB57E275006A9008A3011 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76FB57D275006A9008A3011 /* Firebase.swift */; };
+		A77EB3572761C02A00F2D017 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB3562761C02900F2D017 /* AuthManager.swift */; };
+		A77EB3592761CAE500F2D017 /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77EB3582761CAE500F2D017 /* MessagesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +60,9 @@
 		A76FB56B274EF183008A3011 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterViewController.storyboard; sourceTree = "<group>"; };
 		A76FB579274F6F34008A3011 /* MessageCellSent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellSent.swift; sourceTree = "<group>"; };
 		A76FB57A274F6F34008A3011 /* MessageCellSent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCellSent.xib; sourceTree = "<group>"; };
-		A76FB57D275006A9008A3011 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		A76FB57D275006A9008A3011 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		A77EB3562761C02900F2D017 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		A77EB3582761CAE500F2D017 /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
 		B014C7D5E33DDCCF6E16A676 /* Pods-Flash Chat iOS13.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.release.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.release.xcconfig"; sourceTree = "<group>"; };
 		D4A1BF75A2897245094D4779 /* Pods-Flash Chat iOS13.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flash Chat iOS13.debug.xcconfig"; path = "Target Support Files/Pods-Flash Chat iOS13/Pods-Flash Chat iOS13.debug.xcconfig"; sourceTree = "<group>"; };
 		F76A34CB6C0960893DC616BA /* Pods_Flash_Chat_iOS13.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flash_Chat_iOS13.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,7 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				A76FB54F27468B09008A3011 /* Message.swift */,
-				A76FB57D275006A9008A3011 /* FirebaseManager.swift */,
+				A76FB57D275006A9008A3011 /* Firebase.swift */,
+				A77EB3562761C02900F2D017 /* AuthManager.swift */,
+				A77EB3582761CAE500F2D017 /* MessagesManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -290,11 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76FB57E275006A9008A3011 /* FirebaseManager.swift in Sources */,
+				A76FB57E275006A9008A3011 /* Firebase.swift in Sources */,
+				A77EB3572761C02A00F2D017 /* AuthManager.swift in Sources */,
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,
 				0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */,
+				A77EB3592761CAE500F2D017 /* MessagesManager.swift in Sources */,
 				A76FB54C274686BC008A3011 /* Constants.swift in Sources */,
 				A76FB57B274F6F34008A3011 /* MessageCellSent.swift in Sources */,
 				A76FB55027468B09008A3011 /* Message.swift in Sources */,

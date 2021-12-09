@@ -16,13 +16,15 @@ class ChatViewController: UIViewController {
     
     var messages: [Message] = []
     
-    let db = Firestore.firestore()
-    var firebaseManager = FirebaseManager()
+    var authManager = AuthManager(cloudAuth: FirebaseAuth())
+    var messagesManager = MessagesManager(cloudMessages: FirebaseMessages())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firebaseManager.delegate = self
+        authManager.cloudAuth.delegate = self
+        messagesManager.cloudMessages.delegate = self
+
         tableView.dataSource = self
         title = Constants.appName
         navigationItem.hidesBackButton = true
@@ -34,17 +36,19 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessages() {
-        firebaseManager.getMessages()
+        if let email = authManager.getCurrentUserEmail() {
+            messagesManager.getMessages(byEmail: email)
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextfield.text {
-            firebaseManager.saveMessage(messageBody)
+        if let messageBody = messageTextfield.text, let messageSender = authManager.getCurrentUserEmail() {
+            messagesManager.saveMessage(email: messageSender, body: messageBody)
         }
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        firebaseManager.logout()
+        authManager.logout()
     }
     
 }
@@ -86,7 +90,7 @@ extension ChatViewController: UITableViewDataSource {
         
         let message = messages[indexPath.row]
         
-        if message.sender == firebaseManager.getCurrentUserEmail() {
+        if message.sender == authManager.getCurrentUserEmail() {
             return getSentMessageCell(tableView, indexPath, message: message)
         } else {
             return getReceivedMessageCell(tableView, indexPath, message: message)
